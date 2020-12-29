@@ -8,12 +8,10 @@ public class Task3 {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         if (a < b) {
-            int count = 0;
-            int rsl = b - a;
-            while (count < rsl) {
-                count++;
-                if (((count + a) % 5 == 0) && ((count + a) % 10 != 0)) {
-                    System.out.print((count + a) + " ");
+            while (a < b) {
+                a = a + 1;
+                if ((a % 5 == 0) && ( a % 10 != 0)) {
+                    System.out.print(a + " ");
                 }
             }
         } else {
