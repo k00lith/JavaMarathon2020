@@ -7,8 +7,11 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         boolean rsl = true;
         while (rsl) {
-            //System.out.println("Введите город: ");
             String city = scanner.nextLine();
+            if (city.equals("Stop")) {
+                rsl = false;
+                break;
+            }
             switch (city) {
                 case "Москва":
                 case "Владивосток":
@@ -28,10 +31,6 @@ public class Task1 {
                 case "Мюнхен":
                 case "Кёльн":
                     System.out.println("Германия");
-                    break;
-                case "Stop":
-                    rsl = false;
-                    //System.out.println("*программа завершила работу*");
                     break;
                 default:
                     System.out.println("Неизвестная страна");
